@@ -108,6 +108,7 @@ public class ConceptAprilTag extends LinearOpMode {
                 } else if (gamepad1.dpad_up) {
                     visionPortal.resumeStreaming();
                 }
+                visionPortal.resumeStreaming();
 
                 // Share the CPU.
                 sleep(20);
@@ -128,12 +129,12 @@ public class ConceptAprilTag extends LinearOpMode {
         aprilTag = new AprilTagProcessor.Builder()
 
             // The following default settings are available to un-comment and edit as needed.
-            //.setDrawAxes(false)
-            //.setDrawCubeProjection(false)
-            //.setDrawTagOutline(true)
-            //.setTagFamily(AprilTagProcessor.TagFamily.TAG_36h11)
+            .setDrawAxes(true)
+            .setDrawCubeProjection(true)
+            .setDrawTagOutline(true)
+            .setTagFamily(AprilTagProcessor.TagFamily.TAG_36h11)
             //.setTagLibrary(AprilTagGameDatabase.getCenterStageTagLibrary())
-            //.setOutputUnits(DistanceUnit.INCH, AngleUnit.DEGREES)
+            .setOutputUnits(DistanceUnit.INCH, AngleUnit.DEGREES)
 
             // == CAMERA CALIBRATION ==
             // If you do not manually specify calibration parameters, the SDK will attempt
